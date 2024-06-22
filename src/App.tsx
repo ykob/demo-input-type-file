@@ -1,3 +1,5 @@
+import { Container } from "./components";
+
 function App() {
   const fileReader = new FileReader();
 
@@ -18,10 +20,10 @@ function App() {
   };
 
   return (
-    <div>
+    <Container>
       <h1>Demo input[type="file"]</h1>
       <input type="file" accept="image/png, image/jpeg" onChange={onChange} />
-    </div>
+    </Container>
   );
 }
 
