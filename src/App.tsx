@@ -1,4 +1,5 @@
-import { Container } from "./components";
+import { css } from "styled-system/css";
+import { Container, Heading } from "./components";
 
 function App() {
   const fileReader = new FileReader();
@@ -21,7 +22,7 @@ function App() {
 
   return (
     <Container>
-      <h1>Demo input[type="file"]</h1>
+      <Heading className={css({ mb: 8 })}>Demo input type file</Heading>
       <input type="file" accept="image/png, image/jpeg" onChange={onChange} />
     </Container>
   );
