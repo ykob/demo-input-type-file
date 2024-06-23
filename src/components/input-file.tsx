@@ -26,7 +26,6 @@ export function InputFile({ id }: InputFileProps) {
 
   return (
     <div>
-      <label htmlFor={id}>Select Image file</label>
       <input
         id={id}
         className={styles.input}
@@ -34,11 +33,20 @@ export function InputFile({ id }: InputFileProps) {
         accept="image/png, image/jpeg"
         onChange={onChange}
       />
+      <label className={styles.label} htmlFor={id}>
+        Select Image file
+      </label>
     </div>
   );
 }
 
 const styles = {
-  label: css({}),
+  label: css({
+    cursor: "pointer",
+    "input:focus + &": {
+      outline: "1px solid #000",
+      outlineOffset: "2px",
+    },
+  }),
   input: visuallyHidden({}),
 };

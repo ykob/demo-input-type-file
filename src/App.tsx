@@ -5,7 +5,7 @@ function App() {
   return (
     <Container>
       <Heading className={css({ mb: 8 })}>Demo input type file</Heading>
-      <InputFile />
+      <InputFile id="input-image-file" />
     </Container>
   );
 }
